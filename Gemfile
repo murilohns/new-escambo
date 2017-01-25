@@ -31,8 +31,7 @@ gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden. 
 gem 'devise'
-# Generate Entity-Relationship Diagrams for Rails applications 
-gem 'rails-erd'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -53,6 +52,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Better error page for Rack apps 
   gem "better_errors"
+  # Generate Entity-Relationship Diagrams for Rails applications 
+  gem 'rails-erd'
 end
 
 group :development do
