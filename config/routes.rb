@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
+  devise_for :members
   namespace :site do
     get 'site', to: 'home#index'
   end
@@ -10,8 +12,6 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
-  devise_for :admins
-  devise_for :members
 
   root 'site/home#index'
 
