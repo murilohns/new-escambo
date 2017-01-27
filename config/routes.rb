@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :backoffice do
+    get 'categories/index'
+  end
+
   devise_for :admins
   devise_for :members
   namespace :site do
