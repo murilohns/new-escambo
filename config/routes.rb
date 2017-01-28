@@ -1,21 +1,18 @@
 Rails.application.routes.draw do
 
+  get 'backoffice', to: 'backoffice/dashboard#index'
+
   namespace :backoffice do
-    get 'categories/index'
+    resources :categories, except: [:show, :destroy]
+    get 'dashboard', to: 'dashboard#index'
   end
 
-  devise_for :admins
-  devise_for :members
   namespace :site do
     get 'site', to: 'home#index'
   end
 
-  get 'backoffice', to: 'backoffice/dashboard#index'
-
-  namespace :backoffice do
-    get 'dashboard', to: 'dashboard#index'
-  end
-
+  devise_for :admins
+  devise_for :members
 
   root 'site/home#index'
 
