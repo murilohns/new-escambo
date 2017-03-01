@@ -31,6 +31,8 @@ gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden. 
 gem 'devise'
+#Notify.js
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 
 
 # Use jquery as the JavaScript library

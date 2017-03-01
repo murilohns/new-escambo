@@ -121,6 +121,7 @@ GEM
     rails-assets-bootstrap (3.3.7)
       rails-assets-jquery (>= 1.9.1, < 4)
     rails-assets-jquery (3.1.1)
+    rails-assets-notifyjs (0.4.2)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
@@ -204,6 +205,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.1)
   rails-assets-bootstrap!
+  rails-assets-notifyjs!
   rails-erd
   rails-i18n
   sass-rails (~> 5.0)
@@ -216,4 +218,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.0
+   1.14.4
