@@ -25,15 +25,19 @@ gem 'coffee-rails', '~> 4.2'
 gem 'rails-i18n'
 # Rails gem of the Bootstrap based admin theme SB Admin 2. 
 gem 'bootstrap_sb_admin_base_v2'
-# Bootstrap The most popular front-end framework for developing responsive, mobile first projects on the web
-gem 'rails-assets-bootstrap', source: 'https://rails-assets.org'
 # Manage Procfile-based applications 
 gem 'foreman'
 # Flexible authentication solution for Rails with Warden. 
 gem 'devise'
-#Notify.js
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 
+source 'https://rails-assets.org' do
+  # Bootstrap The most popular front-end framework for developing responsive, mobile first projects on the web
+  gem 'rails-assets-bootstrap' 
+  #Bootbox
+  gem 'rails-assets-bootbox'
+  # Notify.js
+  gem 'rails-assets-notifyjs'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -56,6 +60,8 @@ group :development, :test do
   gem "better_errors"
   # Generate Entity-Relationship Diagrams for Rails applications 
   gem 'rails-erd'
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 end
 
 group :development do
