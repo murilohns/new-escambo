@@ -30,8 +30,9 @@ puts "Administrador..."
 
 Admin.create!(
 				name: "Murilo Henrique Nascimento Souza", 
-				enmail: "admin@admin.com", 
+				email: "admin@admin.com", 
 				password: "123456", 
-				password_confirmation: "123456" )
+				password_confirmation: "123456",
+				role: 0 )
 
 puts "Adminstrador [OK]"
