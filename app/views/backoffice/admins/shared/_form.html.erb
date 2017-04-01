@@ -14,15 +14,19 @@
         <div class="col-lg-6">
         <%= form_for([:backoffice, @admin]) do |f| %>
             <div class="form-group">
+                <label>Nome</label>
+                <%= f.text_field :name, class:"form-control", placeholder:"Nome do administrador" %>
+            </div>
+            <div class="form-group">
                 <label>E-mail</label>
-                <%= f.text_field :email, class:"form-control", placeholder:"Digite seu e-mail" %>
+                <%= f.text_field :email, class:"form-control", placeholder:"E-mail do administrador" %>
             </div>
             <div class="form-group">
                 <label>Senha</label>
-                <%= f.password_field :password, class:"form-control", placeholder:"Digite sua senha" %>
+                <%= f.password_field :password, class:"form-control", placeholder:"Senha do Administrador" %>
             </div><div class="form-group">
                 <label>Confirme sua senha</label>
-                <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Confirme sua senha" %>
+                <%= f.password_field :password_confirmation, class:"form-control", placeholder:"Confirme a senha" %>
             </div>
             <button type="submit" class="btn btn-default">Salvar</button>
         <!-- /.table-responsive -->
