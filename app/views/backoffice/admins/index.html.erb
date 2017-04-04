@@ -1,7 +1,7 @@
-<h1 class="page-header">Administradores</h1> 
+<h1 class="page-header"><%= @admins.model_name.human(count: 2) %></h1> 
 <div class="panel panel-default">
     <div class="panel-heading">
-        Listando administradores
+        <%= t('messages.listing', model: @admins.model_name.human(count: 2)) %>
         <%= link_to new_backoffice_admin_path, class:"btn btn-success btn-circle pull-right", type:"button" do %>
             <i class="fa fa-plus"></i>
         <% end %>
@@ -13,9 +13,9 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Tipo de acesso</th>
+                        <th><%= @admins.model.human_attribute_name('name') %></th>
+                        <th><%= @admins.model.human_attribute_name('email') %></th>
+                        <th><%= @admins.model.human_attribute_name('role') %></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,13 +24,17 @@
                         <td><%= admin.id %></td>
                         <td><%= admin.name %></td>
                         <td><%= admin.email %></td>
-                        <td><%= admin.role_br %></td>
+                         <td><%= admin.role_i18n %></td>
                         <td style="width> 150px">
                         <%= link_to edit_backoffice_admin_path(admin.id), class: "btn btn-primary btn-circle", type:"button" do %>
                             <i class="fa fa-edit"></i>
                         <% end %>
                         <% if current_admin.id != admin.id %>
-                            <%= link_to backoffice_admin_path(admin), method: :delete, class:"btn btn-danger btn-circle", type:"button", data:{confirm: "Você deseja realmente excluir o adminstrador <strong>#{admin.email}?</strong>"} do %>
+                            <%= link_to backoffice_admin_path(admin), method: :delete, class:"btn btn-danger btn-circle", type:"button", data:{confirm: t("messages.confirm_with", item: admin.email)} do %>
+                                <i class="fa fa-times"></i>
+                            <% end %>
+                        <% else %>
+                            <%= link_to '#', class:"btn btn-danger btn-circle", type:"button", disabled: 'disabled' do %>
                                 <i class="fa fa-times"></i>
                             <% end %>
                         <% end %>
