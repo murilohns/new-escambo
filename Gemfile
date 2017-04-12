@@ -33,6 +33,8 @@ gem 'devise'
 gem 'devise-i18n'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
+# Minimal authorization through OO design and pure Ruby classes
+gem 'pundit'
 
 source 'https://rails-assets.org' do
   # Bootstrap The most popular front-end framework for developing responsive, mobile first projects on the web
