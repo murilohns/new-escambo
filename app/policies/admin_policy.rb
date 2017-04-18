@@ -7,7 +7,11 @@ class AdminPolicy < ApplicationPolicy
   class Scope < Scope
 
     def resolve
-      scope
+      if user.with_full_access?
+        scope.all
+      else
+        scope.with_restricted_access
+      end
     end
 
   end
