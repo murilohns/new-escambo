@@ -1,12 +1,14 @@
 class AdminPolicy < ApplicationPolicy
-  class Scope < Scope
-    def new
-      
+  
+    def new?
+      user.full_access?
     end
 
+  class Scope < Scope
 
     def resolve
       scope
     end
+
   end
 end
